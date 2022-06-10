@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="documentation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@1,100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+    <title>Diabetes Documentation</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h2>Something awesome is in the work!!</h2>
+    <div id="main">
+
+        <div class="photo">
+            <!-- <img src="pageconstruction.jpg" alt="page site"> -->
+        </div>
+        <div class="countdown">
+
+            <div id="clockdiv">
+                <div>
+                    <span class="days" id="day">D</span><span class="label">d</span>
+                </div>
+                <div>
+                    <span class="hours" id="hour">H</span><span class="label">h</span>
+                </div>
+                <div>
+                    <span class="minutes" id="minute">M</span><span class="label">m</span>
+                </div>
+                <div>
+                    <span class="seconds" id="second">S</span><span class="label">s</span>
+                </div>
+            </div>
+            <p>Sit back. It's going to be more sophisticated and simple. <br> Stay tuned, coming soon... </p>
+            <button class="button-52"><a href="https://diadec.herokuapp.com/">Explore More</a></button>
+            <a href="https://wa.me/+919502058306" target="blank" class="fa fa-whatsapp"></a>
+            <a href="mailto:akbarali.deccan@gmail.com" target="blank" class="fa fa-envelope" aria-hidden="true"></a>
+            <a href="https://www.instagram.com/its_akber_ali/" class="fa fa-instagram" target="blank"></a>
+
+        </div>
+        
+    </div>
+<p id="demo"></p>
+
+<script>
+    
+var deadline = new Date("june 25e, 2022 00:00:00").getTime();
+  
+var x = setInterval(function() {
+  
+var now = new Date().getTime();
+var t = deadline - now;
+var days = Math.floor(t / (1000 * 60 * 60 * 24));
+var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((t % (1000 * 60)) / 1000);
+document.getElementById("day").innerHTML =days ;
+document.getElementById("hour").innerHTML =hours;
+document.getElementById("minute").innerHTML = minutes; 
+document.getElementById("second").innerHTML =seconds; 
+if (t < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "TIME UP";
+        document.getElementById("day").innerHTML ='0';
+        document.getElementById("hour").innerHTML ='0';
+        document.getElementById("minute").innerHTML ='0' ; 
+        document.getElementById("second").innerHTML = '0'; }
+}, 1000);
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Detector</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logo.ico')}}" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+   
+    <h2>Let's see if you have diabetes!!</h2>
+
+
+    <form action="/" method="POST">
+        <div class="inputs">
+            <label for="Pregnancies">No. of Pregnancies</label>
+            <input type="text" id="Pregnancies" name="Pregnancies" required>
+            <label for="Glucose">Glucose</label>
+            <input type="text" name="Glucose" id="Glucose" required>
+            <label for="Bloodpressure">Blood Pressure</label>
+            <input type="text" name="BloodPressure" id="BloodPressure" required>
+            <label for="ST">Skin Thickness</label>
+            <input type="text" name="SkinThickness" id="SkinThickness" required>
+            <label for="Insulin">Insulin level</label>
+            <input type="text" name="Insulin" id="Insulin" required>
+            <label for="BMI">Body Mass Index</label>
+            <input type="text" name="BMI" id="BMI" required>
+            <label for="DPF">Diabetes Pedigree Function</label>
+            <input type="text" name="DiabetesPedigreeFunction" required id="DPF" >
+            <label for="Age">Age</label>
+            <input type="text" name="Age" id="Age" required>
+            <button type="submit" class="button-52">Submit!!</button>
+        </div>
+    </form>
+</body>
+
+</html>

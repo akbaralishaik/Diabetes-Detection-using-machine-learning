@@ -1,0 +1,89 @@
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/static/indexbg.jpg');
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h2{
+
+    font-family: 'Luckiest Guy', cursive;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 20px;
+}
+input{
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+input:active{
+    border: 2px solid lightblue;
+    transition: 0.5s ease-in;
+}
+
+/* form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+label{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    color: peachpuff;
+}
+.inputs{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* CSS */
+.button-52 {
+    margin: 30px 0px 80px 0px;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 30px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-52:after {
+  content: "";
+  background-color: rgb(143, 220, 245);
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  .button-52 {
+    padding: 13px 50px 13px;
+  }
+}
