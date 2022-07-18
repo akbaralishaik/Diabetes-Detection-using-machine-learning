@@ -17,17 +17,13 @@ file.close()
 def hello_world():
     if request.method == "POST":
         myDict = request.form
-        Pregnancies = int(myDict['Pregnancies'])
         Glucose = float(myDict['Glucose'])
-        BloodPressure = int(myDict['BloodPressure'])
-        SkinThickness = float(myDict['SkinThickness'])
         Insulin = float(myDict['Insulin'])
         BMI = float(myDict['BMI'])
-        DiabetesPedigreeFunction = float(myDict['DiabetesPedigreeFunction'])
         Age = int(myDict['Age'])
 
         #code for inference
-        inputFeatures = [[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]]
+        inputFeatures = [[Glucose,Insulin,BMI,Age]]
         diaProb = clf.predict(inputFeatures)[0]
         if (diaProb==1):
            
@@ -40,4 +36,4 @@ def hello_world():
     return render_template('index.html')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=8000)

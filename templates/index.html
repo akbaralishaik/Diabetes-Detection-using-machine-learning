@@ -1,44 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <title>Diabetes Detector</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="shortcut icon" href="{{ url_for('static', filename='logo.ico')}}" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logo.ico')}}" type="image/x-icon">
 </head>
 
 <body>
-   
-    <h2>Let's see if you have diabetes!!</h2>
+    <nav>
+        <div class="navbar">
 
-
-    <form action="/" method="POST">
-        <div class="inputs">
-            <label for="Pregnancies">No. of Pregnancies</label>
-            <input type="text" id="Pregnancies" name="Pregnancies" required>
-            <label for="Glucose">Glucose</label>
-            <input type="text" name="Glucose" id="Glucose" required>
-            <label for="Bloodpressure">Blood Pressure</label>
-            <input type="text" name="BloodPressure" id="BloodPressure" required>
-            <label for="ST">Skin Thickness</label>
-            <input type="text" name="SkinThickness" id="SkinThickness" required>
-            <label for="Insulin">Insulin level</label>
-            <input type="text" name="Insulin" id="Insulin" required>
-            <label for="BMI">Body Mass Index</label>
-            <input type="text" name="BMI" id="BMI" required>
-            <label for="DPF">Diabetes Pedigree Function</label>
-            <input type="text" name="DiabetesPedigreeFunction" required id="DPF" >
-            <label for="Age">Age</label>
-            <input type="text" name="Age" id="Age" required>
-            <button type="submit" class="button-52">Submit!!</button>
+            <div class="logo">
+                <img src="/static/logo.ico" class="logo" alt="">
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#test">Detect Now</a></li>
+                    <li><a href="#documentation">Documentation</a></li>
+                </ul>
+            </div>
         </div>
-    </form>
+    </nav>
+    <!-- Header for index  -->
+    <div id="home">
+        <div class="text">
+            <h3>Diabetes Detection <br> using Machine Learning</h3>
+            <p>A Great Tool to Detect <br>
+                Diabetes using machine learning
+                model with 99% accuracy.
+            </p>
+        </div>
+
+        <div class="img">
+            <img src="/static/sidemain.png" alt="alternate text for image">
+
+        </div>
+    </div>
+    <!-- This will be the testing form for the Diabetes -->
+    <div id="test">
+        <h2>Detect Diabetes Now!</h2>
+        <form action="/" method="POST">
+            <div class="inputs">
+                <div class="Glucose">
+                    <input type="text" name="Glucose" id="Glucose" placeholder=" greater than 70" required> <span
+                        class="placeholder">Glucose</span>
+                </div>
+                <div class="Insulin">
+                    <input type="text" name="Insulin" id="Insulin" placeholder="something" required> <span
+                        class="placeholder">Insulin</span>
+                </div>
+                <div class="BMI">
+                    <input type="text" name="BMI" id="BMI" placeholder="something" required> <span
+                        class="placeholder">Body Mass Index</span>
+                </div>
+                <div class="Age">
+                    <input type="text" name="Age" id="Age" placeholder="something" required><span
+                        class="placeholder">Age</span>
+                </div>
+                <button type="submit" class="button">Submit!!</button>
+            </div>
+        </form>
+
+    </div>
+    <div id="documentation">
+        <h2>For more information regarding <br>
+            this project, Download the <br>
+            Documentation</h2>
+        <a href="/static/DOCUMENTATION.docx"><button class="button1" >Download Here</button></a>
+        <p>Get in touch with us.</p>
+        <div class="socialicons">
+            <a href="https://www.facebook.com" target="_blank" class="fa fa-facebook"></a>
+            <a href="mailto:akbaralishaik06@gmail.com" target="_blank" class="fa fa-envelope"></a>
+            <a href="https://www.github.com/akbaralishaik" target="_blank" class="fa fa-github"></a>
+            <a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram"></a>
+        </div>
+    </div>
+
+    <!-- <script>
+        var height = $('#home').height();
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > height) {
+                $('.navbar').addClass('scrolled');
+            }
+            else {
+                $('.navbar').removeClass('scrolled');
+            }
+        })
+    </script> -->
 </body>
 
 </html>

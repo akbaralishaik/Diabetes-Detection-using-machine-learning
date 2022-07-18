@@ -23,67 +23,49 @@
         </div>
     </div> -->
     <h2>PROBABILITY OF DIABETES MELLITUS ASSUMED</h2>
-    <h3>Result:</h3><span class="positive">{{str1}}</span>
+   <span class="result">Result:</span><span class="positive">{{str1}}</span>
     <span class="negative">{{str2}}</span>
 
     <label for="table">Result Abridgement</label>
-    <table>
-        <tr>
-            <th >S.No</th>
-            <th>Normal Value</th>
-            <th>Entered Value</th>
-        </tr>
-        <tr>
-            <td>No. of Pregnancies</td>
-            <td>-</td>
-            <td><span>{{input[0][0]}}</span></td>
+    <div class="table">
+
+        <table>
+            <tr>
+                <th >S.No</th>
+                <th>Normal Value</th>
+                <th>Entered Value</th>
         </tr>
         <tr>
             <td>Glucose</td>
             <td>100- 125 mg/dL</td>
-            <td>{{input[0][1]}} mg/dL</td>
-        </tr>
-        <tr>
-            <td>Blood Pressure</td>
-            <td>>140/80 mm Hg</td>
-            <td>{{input[0][2]}} mm Hg</td>
-        </tr>
-        <tr>
-            <td>Skin Thickness</td>
-            <td>3.30-18.20 mm</td>
-            <td>{{input[0][3]}} mm</td>
+            <td>{{input[0][0]}} mg/dL</td>
         </tr>
         <tr>
             <td>Insulin</td>
             <td>5-15 μU/mL(fasting)</td>
-            <td>{{input[0][4]}} μU/mL</td>
+            <td>{{input[0][1]}} μU/mL</td>
         </tr>
         <tr>
             <td>Body Mass Index</td>
             <td>25-29.9(Being Overweight) <br>30-39.9(Affected By Obesity) <br>40 < (Morbid Obesity)</td>
-            <td>{{input[0][5]}}</td>
-        </tr>
-        <tr>
-            <td>Diabetes Pedigree Function</td>
-            <td>0-1(ranges between 0-1)</td>
-            <td>{{input[0][6]}}</td>
+            <td>{{input[0][2]}}</td>
         </tr>
         <tr>
             <td>Age</td>
             <td>-</td>
-            <td>{{input[0][7]}} years</td>
+            <td>{{input[0][3]}} years</td>
         </tr>
     </table>
-
+    
+</div>
     <div class="doc">
         <p class="note">
-            Note: The outcomes displayed here may or may not be accurate. Please refer the <a href="/static/Documentation.html" target="Blank">Documentation</a>.
+            Note: The outcomes displayed here may or may not be accurate.
         </p>
     </div>
-    <hr>
     <footer>
         <p class="footer">
-            Created By Shaik Akbar Ali and Mohammed Akber Ali | All copyrights© reserved
+            Created By Shaik Akbar Ali, Mohammed Akber Ali and Sofiyan Ali | All copyrights &copy; reserved
         </p>
     </footer>
 </body>
